@@ -158,7 +158,10 @@ button.#{$button-root} {
     &:before {
       @extend %fill-parent;
       content: ' ';
-      border-radius: var(--button-default-border-radius);
+      border-radius: var(--button-default-border-radius-top)
+        var(--button-default-border-radius-top)
+        var(--button-default-border-radius-bottom)
+        var(--button-default-border-radius-bottom);
       top: auto;
       bottom: calc(var(--button-raise-level) * -1);
       z-index: 1;
@@ -176,13 +179,14 @@ button.#{$button-root} {
     }
   }
 
+  //Button face
   .#{$button-root}__content {
     position: relative;
     display: flex;
     flex: 1;
     align-items: center;
     justify-content: center;
-    border-radius: var(--button-default-border-radius);
+    border-radius: var(--button-default-border-radius-top);
     text-indent: 0;
     z-index: 1;
     overflow: hidden;
@@ -194,7 +198,7 @@ button.#{$button-root} {
       transform var(--transform-speed) ease-out,
       background var(--transform-speed) ease-out,
       color var(--transform-speed) ease-out;
-    
+
     &:after {
       @extend %fill-parent;
     }
@@ -223,14 +227,22 @@ button.#{$button-root} {
     @extend %clear-focus;
   }
   &:before {
+    //Button shadow
     content: ' ';
     background-color: var(--button-shadow-color);
     width: calc(100% - 2px);
-    height: calc(100% - (var(--button-raise-level) * var(--button-shadow-divisor)));
-    bottom: calc(0px - (var(--button-raise-level) / var(--button-shadow-divisor)));
+    height: calc(
+      100% - (var(--button-raise-level) * var(--button-shadow-divisor))
+    );
+    bottom: calc(
+      0px - (var(--button-raise-level) / var(--button-shadow-divisor))
+    );
     left: 1px;
     position: absolute;
-    border-radius: var(--button-default-border-radius);
+    border-radius: var(--button-default-border-radius-top)
+      var(--button-default-border-radius-top)
+      var(--button-default-border-radius-bottom)
+      var(--button-default-border-radius-bottom);
     transform: skewY(0) translate3d(0, 0, 0);
     transition: transform calc(var(--transform-speed) * 0.8) ease-out,
       background calc(var(--transform-speed) * 0.8) ease-out;

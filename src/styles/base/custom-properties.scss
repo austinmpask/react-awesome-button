@@ -3,6 +3,11 @@
   --button-default-font-size: #{$button-default-font-size};
   --button-default-line-height: #{$button-default-line-height};
   --button-default-border-radius: #{$button-default-border-radius};
+
+  //Additions
+  --button-default-border-radius-top: #{$button-default-border-radius-top};
+  --button-default-border-radius-bottom: #{$button-default-border-radius-bottom};
+
   --button-default-placeholder-width: #{$button-default-placeholder-width};
 
   --button-icon-width: #{$button-icon-width};
@@ -35,6 +40,11 @@
 
   --button-primary-color: #{$button-primary-color};
   --button-primary-color-dark: #{$button-primary-color-dark};
+
+  //Additions
+  --button-primary-shadow-color: #{$button-primary-shadow-color};
+  --button-primary-sink-color: #{$button-primary-sink-color};
+
   --button-primary-color-light: #{$button-primary-color-light};
   --button-primary-color-hover: #{$button-primary-color-hover};
   --button-primary-color-active: #{$button-primary-color-active};
